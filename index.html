@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	 <script language="javascript" type="text/javascript" src="jquery.js"></script>
+	 <script language="javascript" type="text/javascript" src="application.js"></script>
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	
+	<title>Shopping List</title>
+
+</head>
+<body>
+	<div class="container">
+		<h1>Shopping List</h1>
+		
+	<div class="center">
+		<!--<form id="shoppinglist" name="shoppinglist" class="center"> -->
+			<input class="center" id="item" type="text" placeholder="add item to list" required name="item">
+			<input id="submit" type="submit" name="submit" value="Add Item" onclick="addItem()">
+
+		<!--</form> -->
+	</div>	
+		<div class="center">
+			<ul id="labels">
+				<li>Still Need</li>
+				<li>In Cart</li>
+			</ul>
+
+			<ul id="list">
+			
+			</ul>
+	
+		</div>
+		
+	</div><!-- .container -->
+
+</body>
+</html>
