@@ -76,7 +76,7 @@ h1 {
 }
 
 #list li {
-	width: 200px;
+	width: 300px;
 	height: 30px;
 	font-size: 1.3em;
 	color: #000;
@@ -92,23 +92,38 @@ h1 {
 }
 #labels li{
 	display: inline;
-	margin-right: 200px;
+	margin-right: 70px;
 
 }
 
 #labels li:last-child {
-	margin-right: 0;
+	margin-left: 300px;
 }
 
 .unchecked {
 	position: relative;
-	right: 125px;
+	right: 175px;
 	background-color: rgb(220,100,100);
 	background-color: rgba(220,100,100,.7);
 }
 
 .checked {
 	position: relative;
-	right: -135px;
-	background-color: #ddd;
+	right: -185px;
+	background-color: rgb(100, 220, 100);
+	background-color: rgba(100, 220, 100, 0.7);
+}
+
+
+ul span img {
+	position: relative;
+	top: 35px;
+	right: 312px;
+	z-index: 2;
+	height: 13px;
+	width: 13px;
+	cursor: pointer;
+}
+.hidden {
+	display: none;
 }

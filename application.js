@@ -5,11 +5,9 @@ if (!String.prototype.trim) {
 }
  
  $(function() {
-
         $('#item').keypress(function(event) {
             if (event.which == 13) {
                 addItem();
-                //return false; only if needed
             }
         });
     });
@@ -17,18 +15,17 @@ if (!String.prototype.trim) {
  function addItem(){
 	var newItem = document.getElementById('item').value;
 	//$('#item').val().trim();
-	$('#list').prepend('<li class="unchecked">' + newItem + '</li>');
+	$('#list').prepend('<span class="x-away"><img src="images/closeButton1.png" title="remove item" alt="remove item"> <li class="unchecked">' + newItem + '</li></span>');
+
+	//$('item').value() = '';
 	}
-	
-
-
-
 
 	$(document).on('click', "li.unchecked", function(){
 		$(this).toggleClass("checked");
+		//$('.x-away img').closest.toggleClass('hidden');
 });
-	$(document).on('dblclick', "li.unchecked", function(){
-		$(this).remove();
+	$(document).on('click', "img", function(){
+		$(this).closest('span').remove();
 });
 
 
