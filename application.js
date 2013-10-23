@@ -30,7 +30,9 @@ if (!String.prototype.trim) {
 
 
 
-
+function removeAll(){
+	$('.x-away').remove();
+}
 
 
 
