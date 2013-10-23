@@ -4,9 +4,19 @@ if (!String.prototype.trim) {
   };
 }
  
+ $(function() {
+
+        $('#item').keypress(function(event) {
+            if (event.which == 13) {
+                addItem();
+                //return false; only if needed
+            }
+        });
+    });
 
  function addItem(){
-	var newItem = $('#item').val().trim();
+	var newItem = document.getElementById('item').value;
+	//$('#item').val().trim();
 	$('#list').prepend('<li class="unchecked">' + newItem + '</li>');
 	}
 	
