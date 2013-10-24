@@ -14,10 +14,10 @@ if (!String.prototype.trim) {
 
  function addItem(){
 	var newItem = document.getElementById('item').value;
-	//$('#item').val().trim();
+	newItem = newItem.trim();
 	$('#list').prepend('<span class="x-away"><img src="images/closeButton1.png" title="remove item" alt="remove item"> <li class="unchecked">' + newItem + '</li></span>');
 
-	//$('item').value() = '';
+	$('#item').val('');
 	}
 
 	$(document).on('click', "li.unchecked", function(){
@@ -31,7 +31,10 @@ if (!String.prototype.trim) {
 
 
 function removeAll(){
-	$('.x-away').remove();
+	if (confirm('Are you sure you want to remove all items from list?')){
+		$('.x-away').remove();
+		$('#item').val('');
+	}
 }
 
 

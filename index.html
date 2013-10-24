@@ -3,9 +3,9 @@
 <html>
 <head>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	 <script language="javascript" type="text/javascript" src="jquery.js"></script>
-	 <script language="javascript" type="text/javascript" src="application.js"></script>
-	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	 <script language="javascript"  src="jquery.js"></script>
+	 <script language="javascript"  src="application.js"></script>
+	 <meta charset="utf-8" />
 	
 	<title>Shopping List</title>
 
@@ -15,22 +15,20 @@
 		<h1>Shopping List</h1>
 		
 	<div class="center">
-		<!--<form id="shoppinglist" name="shoppinglist" class="center"> -->
-			<input class="center" id="item" type="text" placeholder="add item to list" required name="item"><br />
-		<!--	<input id="submit" type="submit" name="submit" value="Add Item" onclick="addItem()">-->
-			<button onclick="removeAll()">Remove All Items</button>
-
-		<!--</form> -->
+		
+			<input  id="item" class="center" type="text" placeholder="add item to list" required name="item"><br />
+			
+		
+		
+		
 	</div>	
 		<div class="center">
 			<p id="labels"><span id="remove">Remove Item</span><span id="need">Still Need</span><span id="incart">In Cart</span></p>
 
 			<ul id="list">
-
-			</ul>
-	
+			</ul>		
 		</div>
-		
+<button id="removeall" onclick="removeAll()">Remove All Items</button>
 	</div><!-- .container -->
 
 </body>
